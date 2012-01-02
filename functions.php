@@ -2,18 +2,6 @@
 
 add_theme_support('automatic-feed-links'); // Add default posts and comments RSS feed links to head
 
-/*** Top navigation ***/
-
-function register_menu() {
-    register_nav_menu('Header', __('Header'));
-}
-add_action( 'init', 'register_menu' );
-
-if ( !is_nav_menu('Header')) {
-    $menu_id = wp_create_nav_menu('Header');
-    wp_update_nav_menu_item($menu_id, 1);
-}
-
 /*** Comment list ***/
 
 function commentlist($comment, $args, $depth) {

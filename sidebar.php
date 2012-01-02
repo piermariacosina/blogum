@@ -1,13 +1,21 @@
 <div class="sidebar">
     <?php if ( !dynamic_sidebar('Sidebar') ) : ?>
     
-        <div class="widget">
+        <!--<div class="widget">
             <h3>About Blogum</h3>
             <div class="widget_body">
                 <p>Blogum is a simple, grid based blog free Wordpress theme, designed in a modern &amp; minimalist style. The theme has a heavy focus on your content and very clean feel. Theme supports all Wordpress 3.0 features and gives you extra flexibility.</p>
             </div>
-        </div>
-
+        </div>-->
+		<div class="widget">
+		    <h3>Categories</h3>
+		    <div class="widget_body">
+		        <ul>
+		            <?php wp_list_categories('title_li='); ?>
+		        </ul>
+		    </div>
+		</div>
+		
         <div class="widget">
             <h3>Recent entries</h3>
             <div class="widget_body">
@@ -24,16 +32,9 @@
             </div>
         </div>
         
-        <div class="widget">
-            <h3>Categories</h3>
-            <div class="widget_body">
-                <ul>
-                    <?php wp_list_categories('title_li='); ?>
-                </ul>
-            </div>
-        </div>
+        
 
-        <div class="widget">
+       <!-- <div class="widget">
             <h3>Recent comments</h3>
             <div class="widget_body">
                 <ul>
@@ -48,7 +49,7 @@
                 ?>
                 </ul>
             </div>
-        </div>
+        </div>-->
 
     <?php endif; ?>
 </div>

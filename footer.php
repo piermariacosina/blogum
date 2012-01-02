@@ -1,5 +1,8 @@
             </div>
         </div>
+        <div id="about">
+        	<a id="gotop">go top</a>
+                </div>
         <div class="footer">
             <p class="copy">&copy; 2010 —<a href="<?php bloginfo('home'); ?>"><?php bloginfo('name'); ?></a>. All Rights Reserved. Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>.</p>
             <p class="credits">Designed by <a href="http://wpshower.com" target="_blank">Wpshower</a></p>

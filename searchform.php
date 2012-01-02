@@ -1,8 +1,3 @@
-<div class="search">
-    <form method="get" id="searchform" action="<?php bloginfo('url'); ?>">
-        <fieldset>
-            <input name="s" type="text" onfocus="if(this.value=='Search') this.value='';" onblur="if(this.value=='') this.value='Search';" value="Search" />
-            <button type="submit"></button>
-        </fieldset>
-    </form>
-</div>
+<form method="get" id="searchform" action="<?php bloginfo('url'); ?>/">
+    <input type="text" onfocus="if(this.value=='its a great way to find information') this.value='';" onblur="if(this.value=='') this.value='its a great way to find information';" value="its a great way to find information" name="s" id="s" /><br />
+</form>
