@@ -11,17 +11,16 @@
             return;
         endif;
     ?>
-
     <?php
         // You can start editing here -- including this comment!
     ?>
 
         <div class="comments_heading clear">
-            <div class="comment_qty"><?php
+            <div class="comment_qty comment_apex"><?php
                 printf( _n('1 comment', '%1$s comments', get_comments_number()),
                 number_format_i18n( get_comments_number() ), '' );
                 ?></div>
-            <div class="add_comment"><a href="#respond">Submit yours</a></div>
+            <div class="add_comment comment_apex"><a>Submit yours</a></div>
         </div>
 
     <?php if (have_comments()) : ?>
@@ -29,7 +28,7 @@
         <div class="comment_list">
             <ol>
             <?php
-                wp_list_comments(array('callback' => 'commentlist'));
+                wp_list_comments(array('callback' => 'commentlist','per_page'=>'10'));
             ?>
             </ol>
         </div>
@@ -39,7 +38,7 @@
     <?php if ('open' == $post->comment_status) : ?>
 
     <div id="respond" class="clear">
-        <div class="respond_meta">Submit comment</div>
+        <div class="respond_meta comment_apex">Submit comment</div>
         <div class="comment_form">
 
         <?php if ( get_option('comment_registration') && !$user_ID ) : ?>

@@ -7,7 +7,7 @@
 
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/reset.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/fonts/fonts.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?><?php echo '?' . filemtime( get_stylesheet_directory() . '/style.css');?>" type="text/css" media="screen" />
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"><![endif]-->
     <!--[if IE 7]>
         <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/ie7.css" type="text/css" media="screen" />
@@ -23,6 +23,8 @@
 
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo('template_url'); ?>/pagenavi-css.css" />
 	
+	<?php wp_enqueue_script('jquery'); ?>
+	<?php wp_enqueue_script('team', get_template_directory_uri() . '/js/team.js', 'jquery', false);?>
 	<?php wp_enqueue_script('jquery'); ?>
 	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
     <?php wp_head(); ?>

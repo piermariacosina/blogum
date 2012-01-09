@@ -2,6 +2,7 @@
 		animatedcollapse.addDiv('categories', 'fade=0,speed=400,group=srv,hide=1')
 		animatedcollapse.addDiv('archives', 'fade=0,speed=400,group=srv,hide=1')
 		animatedcollapse.addDiv('search', 'fade=0,speed=400,group=srv,hide=1')
+		animatedcollapse.addDiv('team', 'fade=0,speed=400,group=srv,hide=1')
 
 		animatedcollapse.ontoggle=function($, divobj, state){ //fires each time a DIV is expanded/contracted
 			//$: Access to jQuery

@@ -1,5 +1,7 @@
-<?php if ( have_posts() ) : ?>
-    <?php while ( have_posts() ) : the_post(); ?>
+<?php global $post; // required
+    $args = array('numberposts' => 6);          
+    $custom_posts = get_posts($args);
+    foreach($custom_posts as $post) : setup_postdata($post); ?>
 
         <div <?php post_class('clear'); ?> id="post_<?php the_ID(); ?>">
             <div class="post_meta">
@@ -16,5 +18,4 @@
             </div>
         </div>
 
-    <?php endwhile; ?>
-<?php endif; ?>
+    <?php endforeach; ?>
